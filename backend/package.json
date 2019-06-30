@@ -1,0 +1,11 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "buscape-challenge",
+  "main": "index.js",
+  "author": "Victor",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

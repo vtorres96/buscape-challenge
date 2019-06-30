@@ -65,7 +65,7 @@ export const DetailsStyle = styled.div`
             padding: 3px 10px;
             height: 30px;
             border-radius: 3px;
-            background-color: $color-green;
+            background-color: #22b14c;
             cursor: pointer;
         
             i {

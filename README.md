@@ -1,6 +1,12 @@
 # buscape-challenge
 This is the test for the Buscapé Full Stack developer job
 
+It was developed with React.js in frontend.
+
+Repository used as reference: https://github.com/buscape-company/exercicios/tree/master/frontend
+
+See it working: https://github.com/vtorres96/buscape-challenge
+
 ## How to install and run application
 
 ### yarn

@@ -3,10 +3,12 @@ import styled from 'styled-components'
 export const Img = styled.div`
    
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 40%;
-  margin: 0 20px;
+  justify-content: space-between;
+  padding: 20px 18px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 1px 1px 5px #f3f3f3;
 
   .media { 
     width: 90px;

@@ -13,7 +13,7 @@ export const DetailsStyle = styled.div`
         letter-spacing: 0;
         margin-bottom: 20px;
         padding-bottom: 15px;
-        border-bottom: 1px solid $color-gray-100;
+        border-bottom: 1px solid #f3f3f3;
         word-break: break-all;
     
         i {
@@ -31,7 +31,7 @@ export const DetailsStyle = styled.div`
         .values {
             display: flex;
             flex-direction: column;
-            color: $color-gray-400;
+            color: #7c7c7c;
             font-size: 0.7rem;
             font-weight: 900;
             margin-bottom: 20px;
@@ -39,7 +39,7 @@ export const DetailsStyle = styled.div`
             .installments {
                 display: inline-block;
                 margin-bottom: 3px;
-                color: $color-green;
+                color: #22b14c;
         
                 .amount {
                     display: inline-block;

@@ -9,8 +9,8 @@ export default class Image extends Component {
                     <div className="media">
                         <img
                             className="image-view"
-                            src=""
-                            alt=""
+                            src={this.props.src}
+                            alt={this.props.alt}
                         />
                     </div>            
                 </div>

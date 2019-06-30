@@ -7,23 +7,23 @@ export default class Details extends Component {
         return (
             <DetailsStyle>
                 <div className="title">
-                    Teste
+                    {this.props.name}
                     <i className="far fa-heart"></i>
                 </div>
                 <div className="call-action">
                     <div className="values">
                         <span className="installments">
-                        R$
-                            <span className="amount">
-                                100
-                            </span>
+                            {this.props.prices[0].installments}x
+                        </span>
+                        <span className="highlightAmount">
+                        {this.props.prices[0].installmentValue}
                         </span>
                         <span>
-                        ou 
+                            ou 
                             <span className="in-cash">
-                                90
+                            {this.props.prices[0].value}
                             </span>
-                        à vista
+                            à vista     
                         </span>
                     </div>
                     <div className="btn-add-cart">

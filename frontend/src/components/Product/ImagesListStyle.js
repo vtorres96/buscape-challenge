@@ -15,7 +15,7 @@ export const ImgList = styled.div`
             margin: 0 0 5px 0;
             padding: 3px;
             border-radius: 4px;
-            border: 1px solid $color-gray-100;
+            border: 1px solid #f3f3f3;
             cursor: pointer;
             width: 30px;
             height: 30px;
@@ -26,7 +26,7 @@ export const ImgList = styled.div`
             }
 
             &.active {
-                border: 1px solid $primary-color;
+                border: 1px solid #ffce00;
             }
         }
     }

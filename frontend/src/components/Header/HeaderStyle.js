@@ -1,15 +1,14 @@
 import styled from 'styled-components'
 
 export const HeaderStyle = styled.header`
-    background: #ffce00;
-    height: 75px;
+    background-color: #ffce00;
+    height: 80px;
     border-bottom: 1px solid #DDD;
     position: relative;
-    box-sizing: border-box;
     width: 100%;
     
     .header-content {
-        height: 75px;
+        height: 80px;
         padding: 0 20px;
     
         display: flex;

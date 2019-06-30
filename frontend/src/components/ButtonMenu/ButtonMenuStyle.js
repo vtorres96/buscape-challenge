@@ -6,7 +6,7 @@ export const Button = styled.div`
     
     .line {
         display: block;
-        width: 38px;
+        width: 35px;
         height: 5px;
         margin-bottom: 5px;
         background: #000;

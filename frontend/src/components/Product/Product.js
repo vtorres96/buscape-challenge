@@ -21,7 +21,7 @@ export default class Product extends Component {
     }
 
     registerToSocket = () => {
-        const socket = io('http://localhost:3000')
+        const socket = io('http://localhost:3333')
 
         // product
         socket.on('product', newProduct => {
@@ -31,10 +31,9 @@ export default class Product extends Component {
     
     render(){
         return (
-            <div>
+            <div className="container">
                 { this.state.product.map(product => (
-                    
-                    <ProductStyle id={product._id}>
+                    <ProductStyle id={product._id} key={product.name}>
                         <ImagesList
                             activeItem=""
                             images={product.images}
@@ -42,14 +41,12 @@ export default class Product extends Component {
                             onClickItem=""
                         />
                         <Image
-                            src={product.images[""]}
+                            src={product.images}
                             alt={product.name}
                         />              
                         <Details
                            name={product.name}
-                           installments={product.installments}
-                           installmentValue={product.installmentValue}
-                           value={product.value}
+                           prices={product.price}
                            onClickAddToCart="" 
                         />
                     </ProductStyle>

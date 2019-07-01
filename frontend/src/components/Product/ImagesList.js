@@ -1,41 +1,50 @@
-import React, { Component } from 'react';
+import React from 'react';
+import classNames from 'classnames'
 
 import './ImagesListStyle.css'
+import { items, active } from './ImagesListStyle.css'
 
 import noPhoto from '../../assets/img/no-photo.png'
-export default class ImagesList extends Component {
 
-    useDefaultImg = event => {
-        this.setState({ image: event.target.src = noPhoto })
+const ImagesList = ({
+    activeItem,
+    images,
+    alt,
+    onClickItem,
+}) => {
+
+    const useDefaultImg = event => {
+        event.target.src = noPhoto 
     }
 
-    handleImage = event => {
-        this.setState({
+    return (
+    <div className="images">
+        <ul className="images-list">
+            { 
+                images.map((src, index) => {
+                    const classes = classNames(items, {
+                        [active]: index === activeItem
+                    })
 
-        })
-    }
-
-
-    render(){
-        return ( 
-            <div className="images">
-                { this.props.images.map(image => ( 
-                    <ul className="images-list">
+                    return ( 
                         <li 
-                            key={image}
-                            className="items"
-                            onClick={this.props.onClickItem}
+                            key={src}
+                            className={classes}
+                            onClick={onClickItem.bind(this, index)}
                         >
                             <img 
-                                className="image" 
-                                src={image} 
-                                alt={this.props.alt}         
-                                onError={this.useDefaultImg} 
+                                className="items" 
+                                src={src} 
+                                alt={alt}         
+                                onError={useDefaultImg.bind(this)} 
                             />
                         </li>
-                    </ul>
-                ))}
-            </div>
-        );
-    }
+                    )
+                })
+            }
+            </ul>
+        </div>
+    );
   }
+
+  export default ImagesList

@@ -1,37 +1,41 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './DetailsStyle.css'
 
-export default class Details extends Component {
-    render(){
+const Details = ({
+    name, 
+    prices, 
+    onClickAddToCart
+}) => {
         return (
             <div className="details">
                 <div className="title">
-                    {this.props.name}
+                    {name}
                     <i className="far fa-heart"></i>
                 </div>
                 <div className="call-action">
                     <div className="values">
                         <span className="installments">
-                            {this.props.prices.installments}x
+                            {prices.installments}x
                         </span>
                         <span className="amount">
-                        {this.props.prices.installmentValue}
+                        {prices.installmentValue}
                         </span>
                         <span>
                             ou 
                             <span className="in-cash">
-                            {this.props.prices.value}
+                            {prices.value}
                             </span>
                             à vista     
                         </span>
                     </div>
-                    <div className="btn-add-cart">
+                    <div className="btn-add-cart" onClick={onClickAddToCart.bind(this)}>
                         Adicionar ao carrinho
                         <i className="fas fa-chevron-right"></i>
                     </div>
                 </div>         
             </div>
         );
-    }
   }
+
+  export default Details

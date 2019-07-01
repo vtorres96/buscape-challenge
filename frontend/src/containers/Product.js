@@ -1,47 +1,51 @@
 import React, { useState, useEffect } from 'react';
-import api from '../../services/api'
+import api from '../services/api'
 
 import './ProductStyle.css'
-import ImagesList from './ImagesList'
-import Image from './Image'
-import Details from './Details'
+
+import ImagesList from '../components/Product/ImagesList'
+import Image from '../components/Product/Image'
+import Details from '../components/Product/Details'
 
 const Product = () => {
+    const [visibleItem, setVisibleItem] = useState(0)
     const [data, setData] = useState({ products: [] })
 
-    useEffect(async() => {
+    useEffect(() => {
         const fetchData = async () => {
             const response = await api.get('products')
-    
-            setData(response.data);
-        };
-    
-        fetchData();
-      });
+            setData({
+                products: response.data
+            })
+        }
 
-    /*handleImage = event => {
-        const src = event.target.src
-        console.log(src)
-    }*/
+        fetchData()
+    })
+
+    const handleAddToCart = item => {
+
+    }
+
+    const handleThumbClick = clickedItemIndex => setVisibleItem(clickedItemIndex)
 
     return (
         <div className="container">
             { data.products.map(product => (
                 <div id={product._id} key={product.name} className="product">
                     <ImagesList
-                        activeItem=""
+                        activeItem={visibleItem}
                         images={product.images}
                         alt={product.name}
-                        onClickItem=""
+                        onClickItem={handleThumbClick.bind(this)}
                     />
                     <Image
-                        src={product.images}
+                        src={product.images[visibleItem]}
                         alt={product.name}
                     />              
                     <Details
                         name={product.name}
                         prices={product.price[0]}
-                        onClickAddToCart="" 
+                        onClickAddToCart={handleAddToCart.bind(this)}
                     />
                 </div>
             ))}

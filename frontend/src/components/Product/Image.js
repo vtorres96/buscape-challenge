@@ -5,15 +5,13 @@ export default class Image extends Component {
     render(){
         return (
             <Img>
-                <div className="wrapper">
-                    <div className="media">
-                        <img
-                            className="image-view"
-                            src={this.props.src}
-                            alt={this.props.alt}
-                        />
-                    </div>            
-                </div>
+                <div className="media">
+                    <img
+                        className="image-view"
+                        src={this.props.src}
+                        alt={this.props.alt}
+                    />
+                </div>            
             </Img>
         );
     }

@@ -8,4 +8,8 @@ export const ProductStyle = styled.div`
     margin-bottom: 20px;
     background-color: #fff;
     box-shadow: 1px 1px 5px #c9c9c9;
+
+    @include respond-to('desktop-small') {
+        width: 100%;
+    }
 `

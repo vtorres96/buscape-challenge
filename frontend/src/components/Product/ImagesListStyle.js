@@ -2,8 +2,6 @@ import styled from 'styled-components'
 
 export const ImgList = styled.div`
 
-    width: 15%;
-    
     .images-list {
         margin: 0;
         padding: 0;
@@ -17,8 +15,8 @@ export const ImgList = styled.div`
             border-radius: 4px;
             border: 1px solid #f3f3f3;
             cursor: pointer;
-            width: 30px;
-            height: 30px;
+            width: 75px;
+            height: 75px;
 
             .image {
                 width: 100%;

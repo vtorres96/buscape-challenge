@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { Component } from 'react';
+
 import { Button } from './ButtonMenuStyle'
 
-const ButtonMenu = () => {
-  return (
-    <Button>
-        <span className="line"></span>
-        <span className="line"></span>
-        <span className="line"></span>
-    </Button>
-  );
-}
+export default class ButtonMenu extends Component {
+  constructor () {
+    super()
+    this.state = {
+      isHidden: true
+    }
+  }
+  
+  toggleHidden () {
+    this.setState({
+      isHidden: !this.state.isHidden
+    })
+  }
 
-export default ButtonMenu
+  render() {
+    return (
+      <Button onClick={this.toggleHidden}>
+          <span className="line"></span>
+          <span className="line"></span>
+          <span className="line"></span>
+      </Button>
+    );
+  }
+}

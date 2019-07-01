@@ -1,57 +1,52 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import api from '../../services/api'
-import io from 'socket.io-client'
 
 import './ProductStyle.css'
 import ImagesList from './ImagesList'
 import Image from './Image'
 import Details from './Details'
 
-export default class Product extends Component {
-    state = {
-        product: []
-    }
+const Product = () => {
+    const [data, setData] = useState({ products: [] })
+
+    useEffect(async() => {
+        const fetchData = async () => {
+            const response = await api.get('products')
     
-    async componentDidMount() {
-        this.registerToSocket()
-
-        const response = await api.get('products')
-
-        this.setState({ product: response.data })
-    }
-
-    registerToSocket = () => {
-        const socket = io('http://localhost:8080')
- 
-        // product
-        socket.on('product', newProduct => {
-            this.setState({ product: [newProduct, ...this.state.product] })
-        })
-    }
+            setData(response.data);
+        };
     
-    render(){
-        return (
-            <div className="container">
-                { this.state.product.map(product => (
-                    <div id={product._id} key={product.name} className="product">
-                        <ImagesList
-                            activeItem=""
-                            images={product.images}
-                            alt={product.name}
-                            onClickItem=""
-                        />
-                        <Image
-                            src={product.images}
-                            alt={product.name}
-                        />              
-                        <Details
-                           name={product.name}
-                           prices={product.price}
-                           onClickAddToCart="" 
-                        />
-                    </div>
-                ))}
-            </div>
-        );
-    }
+        fetchData();
+      });
+
+    /*handleImage = event => {
+        const src = event.target.src
+        console.log(src)
+    }*/
+
+    return (
+        <div className="container">
+            { data.products.map(product => (
+                <div id={product._id} key={product.name} className="product">
+                    <ImagesList
+                        activeItem=""
+                        images={product.images}
+                        alt={product.name}
+                        onClickItem=""
+                    />
+                    <Image
+                        src={product.images}
+                        alt={product.name}
+                    />              
+                    <Details
+                        name={product.name}
+                        prices={product.price[0]}
+                        onClickAddToCart="" 
+                    />
+                </div>
+            ))}
+        </div>
+    );
   }
+
+  export default Product

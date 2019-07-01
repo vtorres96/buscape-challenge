@@ -13,15 +13,15 @@ export default class Details extends Component {
                 <div className="call-action">
                     <div className="values">
                         <span className="installments">
-                            {this.props.prices[0].installments}x
+                            {this.props.prices.installments}x
                         </span>
                         <span className="amount">
-                        {this.props.prices[0].installmentValue}
+                        {this.props.prices.installmentValue}
                         </span>
                         <span>
                             ou 
                             <span className="in-cash">
-                            {this.props.prices[0].value}
+                            {this.props.prices.value}
                             </span>
                             à vista     
                         </span>

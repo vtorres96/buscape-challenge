@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './ButtonMenuStyle.css'
-export default class ButtonMenu extends Component {
 
-  render() {
+const ButtonMenu = () => {
     return (
       <div className="main-sandwich">
           <span className="line"></span>
@@ -11,5 +10,6 @@ export default class ButtonMenu extends Component {
           <span className="line"></span>
       </div>
     );
-  }
 }
+
+export default ButtonMenu

@@ -11,6 +11,7 @@ export default class Image extends Component {
                         src={this.props.src}
                         alt={this.props.alt}
                     />
+                    {console.log(this.props.src)}
                 </div>            
             </div>
         );

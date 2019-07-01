@@ -9,6 +9,13 @@ export default class ImagesList extends Component {
         this.setState({ image: event.target.src = noPhoto })
     }
 
+    handleImage = event => {
+        this.setState({
+
+        })
+    }
+
+
     render(){
         return ( 
             <div className="images">
@@ -17,6 +24,7 @@ export default class ImagesList extends Component {
                         <li 
                             key={image}
                             className="items"
+                            onClick={this.props.onClickItem}
                         >
                             <img 
                                 className="image" 

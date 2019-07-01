@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom'
 
 import './HeaderStyle.css'
@@ -6,8 +6,8 @@ import './HeaderStyle.css'
 import ButtonMenu from '../ButtonMenu/ButtonMenu'
 
 import logo from '../../assets/img/logo-buscape.png'
-export default class Header extends Component {
-  render(){
+
+const Header = () => {
     return (
       <header className="main-header">
           <div className="header-content">
@@ -20,5 +20,6 @@ export default class Header extends Component {
           </div>
       </header>
     );
-  }
 }
+
+export default Header

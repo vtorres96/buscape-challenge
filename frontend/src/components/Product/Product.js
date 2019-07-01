@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import api from '../../services/api'
 import io from 'socket.io-client'
 
-import { ProductStyle } from './ProductStyle'
+import './ProductStyle.css'
 import ImagesList from './ImagesList'
 import Image from './Image'
 import Details from './Details'
@@ -33,7 +33,7 @@ export default class Product extends Component {
         return (
             <div className="container">
                 { this.state.product.map(product => (
-                    <ProductStyle id={product._id} key={product.name}>
+                    <div id={product._id} key={product.name} className="product">
                         <ImagesList
                             activeItem=""
                             images={product.images}
@@ -49,7 +49,7 @@ export default class Product extends Component {
                            prices={product.price}
                            onClickAddToCart="" 
                         />
-                    </ProductStyle>
+                    </div>
                 ))}
             </div>
         );

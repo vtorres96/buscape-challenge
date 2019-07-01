@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-import { DetailsStyle } from './DetailsStyle'
+import './DetailsStyle.css'
 
 export default class Details extends Component {
     render(){
         return (
-            <DetailsStyle>
+            <div className="details">
                 <div className="title">
                     {this.props.name}
                     <i className="far fa-heart"></i>
@@ -15,7 +15,7 @@ export default class Details extends Component {
                         <span className="installments">
                             {this.props.prices[0].installments}x
                         </span>
-                        <span className="highlightAmount">
+                        <span className="amount">
                         {this.props.prices[0].installmentValue}
                         </span>
                         <span>
@@ -31,7 +31,7 @@ export default class Details extends Component {
                         <i className="fas fa-chevron-right"></i>
                     </div>
                 </div>         
-            </DetailsStyle>
+            </div>
         );
     }
   }

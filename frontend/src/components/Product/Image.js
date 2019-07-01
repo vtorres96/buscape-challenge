@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import { Img } from './ImageStyle'
+import './ImageStyle.css'
 export default class Image extends Component {
     render(){
         return (
-            <Img>
+            <div className="list-image-view">
                 <div className="media">
                     <img
                         className="image-view"
@@ -12,7 +12,7 @@ export default class Image extends Component {
                         alt={this.props.alt}
                     />
                 </div>            
-            </Img>
+            </div>
         );
     }
   }

@@ -1,0 +1,39 @@
+.list-image-view {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 40%;
+  margin: 0 20px;
+}
+
+.list-image-view .media { 
+  width: 90px;
+}
+
+.list-image-view .media .image-view {
+    width: 100%;
+    max-width: 100%; 
+    max-height: 100%; 
+}
+
+@media only screen and (mobile-large) {
+  .list-image-view {
+    margin: 0 40px;
+  }
+
+  .list-image-view .media {
+      width: 110px;
+  }
+}
+
+@media only screen and (tablet)  {
+  .list-image-view .media { 
+      width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .list-image-view .media {
+      width: 350px;
+  }
+}

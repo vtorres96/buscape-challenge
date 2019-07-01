@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
-import { ImgList } from './ImagesListStyle'
+import './ImagesListStyle.css'
+
 import noPhoto from '../../assets/img/no-photo.png'
 export default class ImagesList extends Component {
 
@@ -10,7 +11,7 @@ export default class ImagesList extends Component {
 
     render(){
         return ( 
-            <ImgList>
+            <div className="images">
                 { this.props.images.map(image => ( 
                     <ul className="images-list">
                         <li 
@@ -26,7 +27,7 @@ export default class ImagesList extends Component {
                         </li>
                     </ul>
                 ))}
-            </ImgList>
+            </div>
         );
     }
   }

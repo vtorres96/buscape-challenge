@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from './ButtonMenuStyle'
 
-export default function ButtonMenu() {
+const ButtonMenu = () => {
   return (
     <Button>
         <span className="line"></span>
@@ -10,3 +10,5 @@ export default function ButtonMenu() {
     </Button>
   );
 }
+
+export default ButtonMenu

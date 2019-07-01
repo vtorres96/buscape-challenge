@@ -11,7 +11,7 @@ export default class Product extends Component {
     state = {
         product: []
     }
-
+    
     async componentDidMount() {
         this.registerToSocket()
 
@@ -21,8 +21,8 @@ export default class Product extends Component {
     }
 
     registerToSocket = () => {
-        const socket = io('http://localhost:3333')
-
+        const socket = io('http://localhost:8080')
+ 
         // product
         socket.on('product', newProduct => {
             this.setState({ product: [newProduct, ...this.state.product] })

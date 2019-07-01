@@ -6,7 +6,7 @@ import ButtonMenu from '../ButtonMenu/ButtonMenu'
 
 import logo from '../../assets/img/logo-buscape.png'
 
-export default function Header() {
+const Header = () => {
   return (
     <HeaderStyle>
         <div className="header-content">
@@ -20,3 +20,5 @@ export default function Header() {
     </HeaderStyle>
   );
 }
+
+export default Header

@@ -3,7 +3,7 @@
   justify-content: center;
   flex-wrap: wrap;
   width: 40%;
-  margin: 0 20px;
+  margin: 0 40px;
 }
 
 .list-image-view .media { 
@@ -16,7 +16,7 @@
     max-height: 100%; 
 }
 
-@media only screen and (mobile-large) {
+@media only screen and (min-width: 425px) {
   .list-image-view {
     margin: 0 40px;
   }
@@ -26,7 +26,7 @@
   }
 }
 
-@media only screen and (tablet)  {
+@media only screen and (min-width: 768px)  {
   .list-image-view .media { 
       width: 200px;
   }

@@ -22,7 +22,7 @@
     color: #ffce00;
 }
 
-.details .title .call-action {
+.details .call-action {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -37,25 +37,25 @@
     margin-bottom: 20px;
 }
         
-.details .call-action .values .installments {
+.call-action .values .installments {
     display: inline-block;
     margin-bottom: 3px;
     color: #22b14c;
 }
         
-.details .call-action .values .amount {
+.call-action .values .installments .amount {
     display: inline-block;
     margin-left: 3px;
     font-size: 1.2rem;
 }
 
-.details .call-action .values .in-cash {
+.call-action .values .in-cash {
     display: inline-block;
     margin: 0 3px;
     color: #22b14c;
 }
       
-.details .call-action .btn-add-cart {
+.call-action .btn-add-cart {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -73,3 +73,59 @@
     margin-top: 2px;
     margin-left: 8px;
 }
+
+@media only screen and (mmobile-medium){
+    .details .title {
+        word-break: none;
+    }
+}
+  
+@media only screen and (min-width: 768px){
+    .details .title {
+        font-size: 1.6rem;
+    }
+  
+    .details .call-action {
+        flex-direction: row;
+    }
+
+    .details .call-action .values {
+        font-size: 1rem;
+    }
+    .call-action .values .installments .highlightAmount {
+        font-size: 2rem;
+    }
+  
+    .details .call-action .btnAddToCart {
+        font-size: 1rem;
+        height: 43px;
+        width: 50%;
+        margin-left: 20px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px){
+    .details .title {
+        font-size: 2rem;
+    }
+  
+    .details .call-action {
+      flex-direction: row;
+    }
+
+    .details .call-action .values {
+        font-size: 1.5rem;
+    }
+
+    .call-action .values .installments .amount {
+        font-size: 2rem;
+    }
+  
+    .details .call-action .btn-add-cart {
+        font-size: 1rem;
+        height: 43px;
+        width: 50%;
+        margin-left: 20px;
+    }
+  }
+  

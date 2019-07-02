@@ -17,21 +17,20 @@ const Details = ({
                     <div className="values">
                         <span className="installments">
                             {prices.installments}x
-                        </span>
-                        <span className="amount">
-                        {prices.installmentValue}
+                            <span className="amount">
+                               R$ {prices.installmentValue}
+                            </span>
                         </span>
                         <span>
                             ou 
                             <span className="in-cash">
-                            {prices.value}
+                                R$ {prices.value}
                             </span>
                             à vista     
                         </span>
                     </div>
                     <div className="btn-add-cart" onClick={onClickAddToCart.bind(this)}>
-                        Adicionar ao carrinho
-                        <i className="fas fa-chevron-right"></i>
+                        Adicionar ao carrinho >
                     </div>
                 </div>         
             </div>

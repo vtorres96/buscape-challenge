@@ -23,7 +23,15 @@ const Product = () => {
     })
 
     const handleAddToCart = item => {
-
+        const itemExists = state.cart.items.find(i => i.id === item.id)
+        if (itemExists) return
+    
+        toast('Produto adicionado ao carrinho :)')
+    
+        dispatch({
+          type: 'addItemToCart',
+          payload: item
+        })
     }
 
     const handleImageClick = clickedItemIndex => setVisibleItem(clickedItemIndex)
@@ -45,7 +53,7 @@ const Product = () => {
                     <Details
                         name={product.name}
                         prices={product.price[0]}
-                        onClickAddToCart={handleAddToCart.bind(this)}
+                        onClickAddToCart={handleAddToCart.bind(this, product)}
                     />
                 </div>
             ))}

@@ -36,13 +36,22 @@
     font-weight: 900;
     margin-bottom: 20px;
 }
+
         
 .call-action .values .installments {
     display: inline-block;
     margin-bottom: 3px;
     color: #22b14c;
 }
-        
+   
+.call-action .values .best-price {
+    background-color: #327ed6;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2px 0;
+}
+
 .call-action .values .installments .amount {
     display: inline-block;
     margin-left: 3px;
@@ -62,8 +71,8 @@
     font-size: 0.6rem;
     font-weight: 900;
     color: white;
-    padding: 3px 10px;
-    height: 30px;
+    padding: 6px 10px;
+    height: 32px;
     border-radius: 3px;
     background-color: #22b14c;
     cursor: pointer;
@@ -74,7 +83,7 @@
     margin-left: 8px;
 }
 
-@media only screen and (mmobile-medium){
+@media only screen and (min-width: 992px){
     .details .title {
         word-break: none;
     }
@@ -92,15 +101,21 @@
     .details .call-action .values {
         font-size: 1rem;
     }
-    .call-action .values .installments .highlightAmount {
+
+    .call-action .values .best-price {
+        font-size: 18px;
+    }
+    
+    .call-action .values .installments .amount {
         font-size: 2rem;
     }
   
-    .details .call-action .btnAddToCart {
+    .details .call-action .btn-add-cart {
         font-size: 1rem;
         height: 43px;
         width: 50%;
         margin-left: 20px;
+        margin-top: 20px;
     }
   }
   

@@ -15,6 +15,9 @@ const Details = ({
                 </div>
                 <div className="call-action">
                     <div className="values">
+                        <span className="best-price">
+                            Melhor Preço 
+                        </span>
                         <span className="installments">
                             {prices.installments}x
                             <span className="amount">

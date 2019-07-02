@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames'
 
-import './ImagesListStyle.css'
-import { items, active } from './ImagesListStyle.css'
+import './ImagesList.css'
+import { items, active } from './ImagesList.css'
 
 import noPhoto from '../../assets/img/no-photo.png'
 

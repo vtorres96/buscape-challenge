@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../services/api'
 
-import './ProductStyle.css'
+import './Product.css'
 
 import ImagesList from '../components/Product/ImagesList'
 import Image from '../components/Product/Image'
@@ -26,7 +26,7 @@ const Product = () => {
 
     }
 
-    const handleThumbClick = clickedItemIndex => setVisibleItem(clickedItemIndex)
+    const handleImageClick = clickedItemIndex => setVisibleItem(clickedItemIndex)
 
     return (
         <div className="container">
@@ -36,7 +36,7 @@ const Product = () => {
                         activeItem={visibleItem}
                         images={product.images}
                         alt={product.name}
-                        onClickItem={handleThumbClick.bind(this)}
+                        onClickItem={handleImageClick.bind(this)}
                     />
                     <Image
                         src={product.images[visibleItem]}

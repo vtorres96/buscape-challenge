@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './DetailsStyle.css'
+import './Details.css'
 
 const Details = ({
     name, 

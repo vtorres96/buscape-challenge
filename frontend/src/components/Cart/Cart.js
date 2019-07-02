@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import CartItems from './CartItems'
 import CartAmount from './CartAmount'
 
-import { CartStyle } from './CartStyle'
+import './Cart.css'
 
-export default class Cart extends Component {
-  render() {
+const Cart = () =>{
     return (
-        <CartStyle>
-            <div className="topShaddow"></div>
+        <div className="cart">
+            <div className="top-shaddow"></div>
             <CartItems>
 
             </CartItems>
             <CartAmount>
                 
             </CartAmount>
-        </CartStyle>
+        </div>
     )    
-  }
 }
+
+export default Cart

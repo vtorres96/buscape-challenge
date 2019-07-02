@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './ImageStyle.css'
+import './Image.css'
 
 const Image = ({
     src, alt

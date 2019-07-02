@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-import { CartAmountStyle } from './CartAmountStyle'
+import './CartAmount.css'
 
-export default class CartAmount extends Component {
-    render() {
-        return (
-            <CartAmountStyle>
-                <div className="subtotal">
-                    Subtotal
-                </div>
-                <div className="values">
-                    <div>"installments"x "totalInstallments"</div>
-                    <div>ou " totalAmount " à vista</div>
-                </div>
-            </CartAmountStyle>
-        )
-    }   
+const CartAmount = () => {
+    return (
+        <div className="cart-amount">
+            <div className="subtotal">
+                Subtotal
+            </div>
+            <div className="values">
+                <div>"installments"x "totalInstallments"</div>
+                <div>ou " totalAmount " à vista</div>
+            </div>
+        </div>
+    )  
 }
+
+export default CartAmount
